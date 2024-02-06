@@ -1,0 +1,26 @@
+Installation Instructions:
+  - To begin with, navigate to the project folder in the terminal
+  - If you do not have ocaml follow:
+    - MacOS: 
+        - run 'brew install opam' in terminal
+    - Windows:
+        - run 'sudo apt install opam' in terminal
+    - Then run 'opam init --bare -a -y' in terminal
+    - Next run 'opam switch create cs3110-2023sp ocaml-base-compiler.4.14.0'
+    - Now Logout from your computer and reboot
+    - Run opam switch list to ensure you've downloaded ocaml correctly
+  - Then, install the required packages by running `opam install -y utop odoc ounit2 qcheck bisect_ppx menhir ocaml-lsp-server ocamlformat ocamlformat-rpc`
+
+Build Instructions:
+  - To build the poker player, run `make build`. You must do this first before running 'make play'
+  - When you are ready to run the game, run `make play`
+
+Playing the game:
+  - Be warned, there is an assumption that the user understands the game in freeplay
+  - To start, enter Y or N to decide if you'd like to play
+  - You will be loaded into a game against an Ai bot. From here you can see your hand and the pot. 
+  - Enter one of the following commands: call, check, bet, fold, quit
+    - If you enter bet you will be prompted to enter an amount to bet
+  - Repeat this process depending on what the bot does
+  - For information on what hands are good, a chart is linked here: https://www.888poker.com/magazine/how-to-play-poker/hands
+  - Current Implementation allows users only to play till the flop. 
